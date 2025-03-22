@@ -17,7 +17,7 @@ fun main() {
         println("5. Apresentar média das alturas")
         println("6. Sair")
         print("Escolha uma opção: ")
-        opcao = readLine()?.toIntOrNull() ?: 6
+        opcao = readln()?.toIntOrNull() ?: 6
 
         when (opcao) {
             1 -> {
@@ -25,9 +25,9 @@ fun main() {
                 for (i in 1..15) {
                     println("\nCadastro da pessoa $i:")
                     print("Nome: ")
-                    val nome = readLine() ?: ""
+                    val nome = readln() ?: ""
                     print("Altura: ")
-                    val altura = readLine()?.toDoubleOrNull() ?: 0.0
+                    val altura = readln()?.toDoubleOrNull() ?: 0.0
                     pessoas.add(Pessoa(nome, altura))
                 }
                 println("15 pessoas cadastradas com sucesso!")

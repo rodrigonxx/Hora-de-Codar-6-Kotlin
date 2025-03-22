@@ -20,7 +20,7 @@ fun main() {
         println("3. Apresentar todos os alunos")
         println("4. Sair")
         print("Escolha uma opção: ")
-        opcao = readLine()?.toIntOrNull() ?: 4
+        opcao = readln()?.toIntOrNull() ?: 4
 
         when (opcao) {
             1 -> {
@@ -28,11 +28,11 @@ fun main() {
                 for (i in 1..20) {
                     println("\nCadastro do aluno $i:")
                     print("Nome: ")
-                    val nome = readLine() ?: ""
+                    val nome = readln() ?: ""
                     val notas = mutableListOf<Double>()
                     for (j in 1..4) {
                         print("Nota $j: ")
-                        notas.add(readLine()?.toDoubleOrNull() ?: 0.0)
+                        notas.add(readln()?.toDoubleOrNull() ?: 0.0)
                     }
                     alunos.add(Aluno(nome, notas))
                 }
@@ -41,7 +41,7 @@ fun main() {
             }
             2 -> {
                 print("Digite o nome para pesquisar: ")
-                val nomePesquisa = readLine() ?: ""
+                val nomePesquisa = readln() ?: ""
                 val alunoEncontrado = alunos.find { it.nome == nomePesquisa }
                 if (alunoEncontrado != null) {
                     println(alunoEncontrado)

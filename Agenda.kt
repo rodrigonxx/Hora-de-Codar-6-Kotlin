@@ -16,7 +16,7 @@ fun main() {
         println("4. Apresentar todos os contatos")
         println("5. Sair")
         print("Escolha uma opção: ")
-        opcao = readLine()?.toIntOrNull() ?: 5
+        opcao = readln()?.toIntOrNull() ?: 5
 
         when (opcao) {
             1 -> {

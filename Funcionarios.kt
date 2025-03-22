@@ -17,7 +17,7 @@ fun main() {
         println("5. Apresentar funcionários com salário = R$1000")
         println("6. Sair")
         print("Escolha uma opção: ")
-        opcao = readLine()?.toIntOrNull() ?: 6
+        opcao = readln()?.toIntOrNull() ?: 6
 
         when (opcao) {
             1 -> {
@@ -25,11 +25,11 @@ fun main() {
                 for (i in 1..20) {
                     println("\nCadastro do funcionário $i:")
                     print("Matrícula: ")
-                    val matricula = readLine()?.toIntOrNull() ?: 0
+                    val matricula = readln()?.toIntOrNull() ?: 0
                     print("Nome: ")
-                    val nome = readLine() ?: ""
+                    val nome = readln() ?: ""
                     print("Salário: ")
-                    val salario = readLine()?.toDoubleOrNull() ?: 0.0
+                    val salario = readln()?.toDoubleOrNull() ?: 0.0
                     funcionarios.add(Funcionario(matricula, nome, salario))
                 }
                 funcionarios.sortBy { it.matricula }
@@ -37,7 +37,7 @@ fun main() {
             }
             2 -> {
                 print("Digite a matrícula para pesquisar: ")
-                val matriculaPesquisa = readLine()?.toIntOrNull() ?: 0
+                val matriculaPesquisa = readln()?.toIntOrNull() ?: 0
                 val funcionarioEncontrado = funcionarios.find { it.matricula == matriculaPesquisa }
                 if (funcionarioEncontrado != null) {
                     println(funcionarioEncontrado)
